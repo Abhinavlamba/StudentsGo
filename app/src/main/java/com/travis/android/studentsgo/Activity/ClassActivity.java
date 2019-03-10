@@ -314,21 +314,21 @@ public class ClassActivity extends AppCompatActivity implements View.OnClickList
                 break;
         }
     }
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == 1020) {
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "camera permission granted", Toast.LENGTH_LONG).show();
-                Intent cameraIntent = new
-                        Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(cameraIntent, 1024);
-            } else {
-                Toast.makeText(this, "camera permission denied", Toast.LENGTH_LONG).show();
-            }
-
-        }
-    }
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+//        if (requestCode == 1020) {
+//            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//                Toast.makeText(this, "camera permission granted", Toast.LENGTH_LONG).show();
+//                Intent cameraIntent = new
+//                        Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+//                startActivityForResult(cameraIntent, 1024);
+//            } else {
+//                Toast.makeText(this, "camera permission denied", Toast.LENGTH_LONG).show();
+//            }
+//
+//        }
+//    }
     public String getRealPathFromURI(Context context, Uri contentUri) {
         Cursor cursor = null;
         try {
@@ -342,5 +342,21 @@ public class ClassActivity extends AppCompatActivity implements View.OnClickList
                 cursor.close();
             }
         }
+    }
+    @Override
+    public void onRequestPermissionsResult(int permsRequestCode, String[] permissions, int[] grantResults){
+
+        switch(permsRequestCode)
+        {
+            case 3:
+                Log.v("ABC","123456");
+                if(grantResults.length>=1)
+                {boolean locationAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+                    Log.v("Hello123","hello1234");
+                    boolean read = grantResults[1] == PackageManager.PERMISSION_GRANTED;}
+                break;
+
+        }
+
     }
 }

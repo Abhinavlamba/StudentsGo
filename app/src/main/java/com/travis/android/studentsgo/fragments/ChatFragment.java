@@ -71,13 +71,12 @@ public class ChatFragment extends Fragment
     ChatAdapter adapter;
     RecyclerView recyclerView;
     EditText editText;
-    ImageButton imageButton;
+    ImageButton imageButton,imageButton1;
     FirebaseAuth auth;
     FirebaseUser user;
     JsonObject jsonObject;
-    Button searchbutton;
     Activity activity;
-
+    int i;
     private Socket mSocket;
     {
         try {
@@ -133,6 +132,8 @@ public class ChatFragment extends Fragment
         recyclerView = view.findViewById(R.id.recyclerview);
         editText = view.findViewById(R.id.edittext);
         imageButton = view.findViewById(R.id.imagebut);
+        imageButton1 = view.findViewById(R.id.filter);
+        i=0;
         search = view.findViewById(R.id.search);
         search.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable s) {
@@ -165,13 +166,22 @@ public class ChatFragment extends Fragment
                 }
             }
         });
-        searchbutton = view.findViewById(R.id.searchbutton);
-        searchbutton.setOnClickListener(new View.OnClickListener() {
+        imageButton1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
+                if(i==0)
+                {editText.setVisibility(View.GONE);
+                    search.setVisibility(View.VISIBLE);
+                    i=i+1;}
+                else if(i==1){
+                    editText.setVisibility(View.VISIBLE);
+                    search.setVisibility(View.GONE);
+                    i=0;
+                }
             }
+
         });
+
         recyclerView.setAdapter(adapter);
         LinearLayoutManager manager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(manager);
