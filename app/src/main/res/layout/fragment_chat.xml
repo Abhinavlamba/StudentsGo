@@ -6,9 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ChatActivity"
-    android:background="@drawable/backgroundgen"
-    >
-
+    android:background="@android:color/white">
     <!--android:fitsSystemWindows="true">-->
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
@@ -16,40 +14,40 @@
         android:id="@+id/recyclerview"
         android:layout_above="@id/linear"
         android:layout_alignParentTop="true"
-        />
+        android:background="#d3d3d3"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:id="@+id/linear">
-
-        <EditText
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:id="@+id/search"
-            android:layout_centerHorizontal="true"
-            />
-        <Button
-            android:id="@+id/searchbutton"
-            android:layout_below="@id/search"
-            android:layout_centerHorizontal="true"
-            android:text="SEARCh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            ></Button>
+        android:id="@+id/linear"
+        android:layout_marginBottom="8dp">
         <android.support.design.widget.TextInputLayout
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
             >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Write something"
                 android:fontFamily="@font/psb"
-                android:id="@+id/edittext" />
+                android:id="@+id/edittext"
+                />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/search"
+                    android:layout_centerHorizontal="true"
+                    android:hint="FilterBy"
+                    android:fontFamily="@font/psb"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
         </android.support.design.widget.TextInputLayout>
         <ImageButton
             android:layout_width="50dp"
@@ -60,6 +58,16 @@
             android:src="@drawable/ic_arrow_forward_black_24dp"
             android:layout_margin="4dp"
             android:id="@+id/imagebut"
+            />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:background="@drawable/buttongradient"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_filter_list_black_24dp"
+            android:layout_margin="4dp"
+            android:id="@+id/filter"
             />
     </LinearLayout>
 

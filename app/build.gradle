@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled  true
     }
     buildTypes {
         release {
@@ -46,6 +47,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
     implementation 'jp.wasabeef:glide-transformations:3.3.0'
     implementation 'com.github.nkzawa:socket.io-client:0.3.0'
+    implementation 'com.ibm.watson.developer_cloud:java-sdk:5.5.0'
 
 }
 apply plugin: 'com.google.gms.google-services'

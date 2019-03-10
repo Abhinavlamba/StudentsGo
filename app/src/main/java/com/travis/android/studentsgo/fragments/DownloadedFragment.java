@@ -89,13 +89,14 @@ public class DownloadedFragment extends Fragment {
 //                Intent intent = new Intent(Intent.ACTION_VIEW);
 //                Log.v("FIleNAMe", String.valueOf(file));
 ////                Uri data = Uri.fromFile(file);
-//                Uri data = FileProvider.getUriForFile(activity,BuildConfig.APPLICATION_ID + ".provider",file);
+//
 //                Log.v("FILENAME", String.valueOf(file));
 //                intent.setDataAndType(data, type);
 //                startActivity(intent);
                 File file = new File(Environment.getExternalStorageDirectory(),
                         itemList.get(pos).getName());
                 Uri path = Uri.fromFile(file);
+//                Uri path = FileProvider.getUriForFile(activity,BuildConfig.APPLICATION_ID + ".provider",file);
                 Log.v("Hello1234",itemList.get(pos).getName());
                 Intent pdfOpenintent = new Intent(Intent.ACTION_VIEW);
                 pdfOpenintent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

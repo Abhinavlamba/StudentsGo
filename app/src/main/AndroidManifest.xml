@@ -45,7 +45,8 @@
 
         </activity>
         <activity android:name=".Activity.CurrentImage" />
-        <activity android:name=".Activity.CurrentClass">
+        <activity android:name=".Activity.CurrentClass" android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

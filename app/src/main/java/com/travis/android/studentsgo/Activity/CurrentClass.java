@@ -28,10 +28,10 @@ public class CurrentClass extends AppCompatActivity {
     DownloadedFragment fragment;
     ViewPager viewPager;
     TabLayout tabLayout;
-    private int [] tabIcons = {
-            R.drawable.announcements24,R.drawable.assignments24,R.drawable.test24,R.drawable.syllabus24,R.drawable.timetable24
-            , R.drawable.downloaded
-    };
+//    private int [] tabIcons = {
+//            R.drawable.announcements24,R.drawable.assignments24,R.drawable.test24,R.drawable.syllabus24,R.drawable.timetable24
+//            , R.drawable.downloaded
+//    };
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +50,12 @@ public class CurrentClass extends AppCompatActivity {
 //        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         tabLayout =  findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(viewPager);
+
         for (int i = 0;i< tabLayout.getTabCount() ;i++)
         {
             TextView tabOne = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_text, null);
 //            tabOne.setText("Announcements");
-            tabOne.setCompoundDrawablesWithIntrinsicBounds(tabIcons[i], 0, 0, 0);
+//            tabOne.setCompoundDrawablesWithIntrinsicBounds(tabIcons[i], 0, 0, 0);
             tabLayout.getTabAt(i).setCustomView(tabOne);
         }
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -100,9 +101,10 @@ public class CurrentClass extends AppCompatActivity {
         {
             case 3:
                 Log.v("ABC","123456");
-                boolean locationAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+                if(grantResults.length>=1)
+                {boolean locationAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
                 Log.v("Hello123","hello1234");
-                boolean read = grantResults[1] == PackageManager.PERMISSION_GRANTED;
+                boolean read = grantResults[1] == PackageManager.PERMISSION_GRANTED;}
                 break;
 
         }

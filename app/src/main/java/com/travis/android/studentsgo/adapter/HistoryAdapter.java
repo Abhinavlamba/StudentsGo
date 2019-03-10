@@ -49,15 +49,15 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
 //    <color name="green">#69F0AE</
         holder.name.setText(itemList.get(position).getName());
         if (position % 5 == 0)
-            holder.cardView.setCardBackgroundColor(Color.parseColor("#1E88E5")) ;
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#d3d3d3")) ;
         else if (position % 5 == 1)
-            holder.cardView.setCardBackgroundColor(Color.parseColor("#FF8F00")) ;
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#d3d3d3")) ;
         else if (position % 5 == 2)
-            holder.cardView.setCardBackgroundColor(Color.parseColor("#E53935"));
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#d3d3d3"));
         else if (position % 5 == 3)
-            holder.cardView.setCardBackgroundColor(Color.parseColor("#AA00FF"));
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#d3d3d3"));
         else if (position % 5 == 4)
-            holder.cardView.setCardBackgroundColor(Color.parseColor("#69F0AE"));
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#d3d3d3"));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -49,15 +49,15 @@ public class AdapterDownloaded extends RecyclerView.Adapter<AdapterDownloaded.My
         holder.fileName.setText(files.get(position).getName());
         holder.uploadedBy.setText(files.get(position).getUploadedBy());
         if (position % 5 == 0)
-            holder.document.setCardBackgroundColor(Color.parseColor("#CC1E88E5")) ;
+            holder.document.setCardBackgroundColor(Color.parseColor("#d3d3d3")) ;
         else if (position % 5 == 1)
-            holder.document.setCardBackgroundColor(Color.parseColor("#CCFF8F00")) ;
+            holder.document.setCardBackgroundColor(Color.parseColor("#d3d3d3")) ;
         else if (position % 5 == 2)
-            holder.document.setCardBackgroundColor(Color.parseColor("#CCE53935"));
+            holder.document.setCardBackgroundColor(Color.parseColor("#d3d3d3"));
         else if (position % 5 == 3)
-            holder.document.setCardBackgroundColor(Color.parseColor("#CCAA00FF"));
+            holder.document.setCardBackgroundColor(Color.parseColor("#d3d3d3"));
         else if (position % 5 == 4)
-            holder.document.setCardBackgroundColor(Color.parseColor("#CC69F0AE"));
+            holder.document.setCardBackgroundColor(Color.parseColor("#d3d3d3"));
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

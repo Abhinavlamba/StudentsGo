@@ -7,10 +7,10 @@
     style="@style/CardView"
     app:cardCornerRadius="8dp"
     app:contentPadding="4dp"
-    android:layout_margin="8dp"
+    android:layout_margin="2dp"
     app:cardUseCompatPadding="true"
     android:id="@+id/cardView"
-
+    app:cardElevation="8dp"
     >
     <RelativeLayout
         android:layout_width="wrap_content"

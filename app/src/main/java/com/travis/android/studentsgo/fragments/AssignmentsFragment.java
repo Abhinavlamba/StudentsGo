@@ -88,7 +88,7 @@ public class AssignmentsFragment extends Fragment implements View.OnClickListene
     String docFilePath;
     private StorageReference mStorageRef;
     String downloadUrl;
-    TextView textView;
+//    TextView textView;
     List<DownloadedFile> files;
     List <History> downloadedList;
     Uri fileuri;
@@ -143,7 +143,7 @@ public class AssignmentsFragment extends Fragment implements View.OnClickListene
         progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progressDialog.setCancelable(true);
         button = view.findViewById(R.id.pdf);
-        textView = view.findViewById(R.id.url);
+//        textView = view.findViewById(R.id.url);
         downloadHistory = view.findViewById(R.id.downloadedTask);
         downloadHistory.setOnClickListener(this);
         mStorageRef = FirebaseStorage.getInstance().getReference();
@@ -482,7 +482,7 @@ public void onRequestPermissionsResult(int permsRequestCode, String[] permission
 //                                            .build();
                                     Log.v("PUCK",uri.toString());
                                     Toast.makeText(getActivity(), "Success", Toast.LENGTH_LONG).show();
-                                    textView.setText(uri.toString());
+//                                    textView.setText(uri.toString());
 //                                    Log.v("CHECKDOC",uri.toString());
                                 }
                             });

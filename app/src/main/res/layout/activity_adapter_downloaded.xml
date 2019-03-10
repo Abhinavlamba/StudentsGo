@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/colorPrimaryDark"
         app:cardCornerRadius="20dp"
         android:layout_marginTop="8dp"
@@ -13,6 +13,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
         android:id="@+id/document"
+        app:contentPadding="8dp"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -28,6 +29,7 @@
     android:layout_marginTop="16sp"
     android:layout_marginLeft="12dp"
     android:id="@+id/uploadedby"
+    android:textColor="@android:color/black"
 
     />
     <TextView
@@ -39,7 +41,9 @@
         android:fontFamily="@font/psb"
         android:layout_marginLeft="12dp"
         android:layout_below="@id/uploadedby"
+        android:textColor="@android:color/black"
         />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
+
 </RelativeLayout>
