@@ -1,0 +1,6 @@
+query allpostqueries{
+  book (id :"2")
+  {
+    name
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "246743031421",
+    "firebase_url": "https://studentsgo-1eed0.firebaseio.com",
+    "project_id": "studentsgo-1eed0",
+    "storage_bucket": "studentsgo-1eed0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246743031421:android:851993db0af20220",
+        "android_client_info": {
+          "package_name": "com.travis.android.studentsgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "246743031421-aeho70jhf6t6b2g4icqqkc7l4d2ukjnh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.travis.android.studentsgo",
+            "certificate_hash": "0d761d951e9483e00f3f67afce6d132386621545"
+          }
+        },
+        {
+          "client_id": "246743031421-aal8me4h20hchn74b8ab0loh84ut0m3o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByKdFAs3HT1PatNsWjsgmnZBbFdOEW1pk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "246743031421-aal8me4h20hchn74b8ab0loh84ut0m3o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

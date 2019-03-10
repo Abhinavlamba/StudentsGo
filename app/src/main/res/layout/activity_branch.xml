@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bellow"
+    android:background="@drawable/backgroundgen"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/back"
+        android:orientation="vertical"
+        android:background="@drawable/backgroundgen">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:text="Select Stream"
+            android:elevation="1dp"
+            android:fontFamily="@font/psb"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:elevation="1dp"
+            android:layout_gravity="center"
+            android:background="@drawable/search"
+            android:hint="Your Branch"
+            android:fontFamily="@font/ps"
+            android:padding="16dp"
+            android:id="@+id/search"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/back"
+        android:background="@color/white">
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:clipToPadding="false"
+        android:layout_alignParentTop="true"
+        android:paddingTop="8dp"
+        android:paddingBottom="32dp"
+        android:layout_marginBottom="-24dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/branch_rv">
+    </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</RelativeLayout>
